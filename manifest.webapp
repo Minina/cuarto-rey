@@ -1,0 +1,17 @@
+{
+  "version": "1.0",
+  "name": "Cuarto Rey",
+  "launch_path": "/index.html",
+  "description": "Prueba en Firefox",
+  "icons": {
+    "128": "/pictures/images.jpg"
+  },
+  "developer": {
+    "name": "Javiera, Camila, Claudia "
+  },
+  "install_allowed_from": [
+    "*"
+  ],
+  "default_locate": "es",
+  "permissions": {}
+}
