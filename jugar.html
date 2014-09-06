@@ -17,6 +17,54 @@
 			background-repeat: no-repeat;
 			background-position: 50% 25%
 					}
+
+		button{
+					-moz-box-shadow:inset 0px 1px 0px 0px #ffffff;
+					-webkit-box-shadow:inset 0px 1px 0px 0px #ffffff;
+					box-shadow:inset 0px 1px 0px 0px #ffffff;
+					background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #ededed), color-stop(1, #dfdfdf));
+					background:-moz-linear-gradient(top, #ededed 5%, #dfdfdf 100%);
+					background:-webkit-linear-gradient(top, #ededed 5%, #dfdfdf 100%);
+					background:-o-linear-gradient(top, #ededed 5%, #dfdfdf 100%);
+					background:-ms-linear-gradient(top, #ededed 5%, #dfdfdf 100%);
+					background:linear-gradient(to bottom, #ededed 5%, #dfdfdf 100%);
+					filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ededed', endColorstr='#dfdfdf',GradientType=0);
+					background-color:#ededed;
+					-moz-border-radius:9px;
+					-webkit-border-radius:9px;
+					border-radius:9px;
+					border:1px solid #dcdcdc;
+					display:inline-block;
+					cursor:pointer;
+					color:#777777;
+					font-family:Trebuchet MS;
+					font-size:13px;
+					font-weight:bold;
+					padding:10px 25px;
+					text-decoration:none;
+					text-shadow:0px 1px 0px #ffffff;
+					margin-right: 10px;
+
+    			}
+		
+
+				button:hover {
+					background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #dfdfdf), color-stop(1, #ededed));
+					background:-moz-linear-gradient(top, #dfdfdf 5%, #ededed 100%);
+					background:-webkit-linear-gradient(top, #dfdfdf 5%, #ededed 100%);
+					background:-o-linear-gradient(top, #dfdfdf 5%, #ededed 100%);
+					background:-ms-linear-gradient(top, #dfdfdf 5%, #ededed 100%);
+					background:linear-gradient(to bottom, #dfdfdf 5%, #ededed 100%);
+					filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#dfdfdf', endColorstr='#ededed',GradientType=0);
+					background-color:#dfdfdf;
+				}
+				button:active {
+					position:relative;
+					top:1px;
+				}			
+
+
+
 		.juego{
 
 				-webkit-box-shadow: 10px 6px 8px 0px rgba(99, 80, 60, 0.75);
@@ -24,7 +72,7 @@
 				box-shadow:         6px 4px 8px 0px rgba(99, 80, 60, 0.75);
 				
 				background-color: #0000;
-				background-image: url(pictures/18.jpg);
+				background-image: url();
 
 				width: 150px;
 				height: 238px;
@@ -36,12 +84,26 @@
 	<body>
 <center>
 		<div  class= "juego">
+			
+		<script language="javascript">
 
+			function vector()
+			{
+			n=0;
+			this[n++]="pictures/18.jpg";
+			this[n++]="pictures/ab.jpg";
+			this[n++]="pictures/aa.jpg";
+			this.N=n;
+			}
+			var Imagenes=new vector();
+			src= Imagenes[ Math.floor(Math.random() * Imagenes.N) ] ;
+			document.write("<img src="+src+" align=center>");
+			</script>
 		</div>
 
+		<button onclick=location="index.html"> Volver</button>
+		<button onclick=location="jugar.html"> Siguiente carta</button>
 
-		 <form name="myform" action="index.html" method="POST"> 
-			<input type="submit" value="Volver"> 
 	</center>
 	</body>
 </html>
