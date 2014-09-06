@@ -2,9 +2,9 @@
   "version": "1.0",
   "name": "Cuarto Rey",
   "launch_path": "/index.html",
-  "description": "EL mejor juego para compartir un trago con tus amigos.",
+  "description": "Prueba en Firefox",
   "icons": {
-    "128": "/28.gif"
+    "128": "/28.jpg"
   },
   "developer": {
     "name": "Javiera T, Camila M, Claudia G"
