@@ -73,16 +73,10 @@
 				
 				background-color: #0000;
 				background-image: url();
-				    
-				width: 180px;
-				height: 230px;
-				margin: 0 25px;
+
+				width: 150px;
+				height: 238px;
 				margin-bottom: 50px;
-				-moz-border-radius: 15px 15px 15px 15px;
-/*para Safari y Chrome*/
--webkit-border-radius: 15px 15px 15px 15px;
-/* para Opera */
-border-radius: 15px 15px 15px 15px;
 		}
 		
 	</style>
@@ -91,73 +85,98 @@ border-radius: 15px 15px 15px 15px;
 <center>
 		<div  class= "juego">
 			
-		<script language="javascript">
-
-			function vector()
+    <img src="pictures/inicial.jpg" onclick="this.src = cambia(this.src);" />
+     
+     
+    <script type="text/javascript">
+	function vector()
 			{
 			n=0;
-			this[n++]="pictures/aa.jpg";
-			this[n++]="pictures/2pi.jpg";
-			this[n++]="pictures/3pi.jpg";
-			this[n++]="pictures/4pi.jpg";
-			this[n++]="pictures/5pi.jpg";
-			this[n++]="pictures/6pi.jpg";
-			this[n++]="pictures/7pi.jpg";
-			this[n++]="pictures/8pi.jpg";
-			this[n++]="pictures/9pi.jpg";
-			this[n++]="pictures/10pi.jpg";
-			this[n++]="pictures/jpi.jpg";
-			this[n++]="pictures/quinapi.jpg";
-			this[n++]="pictures/kpi.jpg";
-			this[n++]="pictures/ar.jpg";
-			this[n++]="pictures/2di.jpg";
-			this[n++]="pictures/3di.jpg";
-			this[n++]="pictures/4di.jpg";
-			this[n++]="pictures/5di.jpg";
-			this[n++]="pictures/6di.jpg";
-			this[n++]="pictures/7di.jpg";
-			this[n++]="pictures/8di.jpg";
-			this[n++]="pictures/9di.jpg";
-			this[n++]="pictures/10di.jpg";
-			this[n++]="pictures/jdi.jpg";
-			this[n++]="pictures/qdi.jpg";
-			this[n++]="pictures/kdi.jpg";
-			this[n++]="pictures/arr.jpg";
 			this[n++]="pictures/2co.jpg";
-			this[n++]="pictures/3co.jpg";
-			this[n++]="pictures/4co.jpg";
-			this[n++]="pictures/5co.jpg";
-			this[n++]="pictures/6co.jpg";
-			this[n++]="pictures/7co.jpg";
-			this[n++]="pictures/8co.jpg";
-			this[n++]="pictures/9co.jpg";
-			this[n++]="pictures/10co.jpg";
-			this[n++]="pictures/jco.jpg";
-			this[n++]="pictures/qco.jpg";
-			this[n++]="pictures/kco.jpg"
-			this[n++]="pictures/an.jpg";
+			this[n++]="pictures/2di.jpg";
 			this[n++]="pictures/2n.jpg";
+			this[n++]="pictures/2pi.jpg";
+			this[n++]="pictures/3co.jpg";
+			this[n++]="pictures/3di.jpg";
 			this[n++]="pictures/3n.jpg";
+			this[n++]="pictures/3pi.jpg";
+			this[n++]="pictures/4co.jpg";
+			this[n++]="pictures/4di.jpg";
 			this[n++]="pictures/4n.jpg";
+			this[n++]="pictures/4pi.jpg";
+			this[n++]="pictures/5co.jpg";
+			this[n++]="pictures/5di.jpg";
 			this[n++]="pictures/5n.jpg";
+			this[n++]="pictures/5pi.jpg";
+			this[n++]="pictures/6co.jpg";
+			this[n++]="pictures/6di.jpg";
 			this[n++]="pictures/6n.jpg";
+			this[n++]="pictures/6pi.jpg";
+			this[n++]="pictures/7co.jpg";
+			this[n++]="pictures/7di.jpg";
 			this[n++]="pictures/7n.jpg";
+			this[n++]="pictures/7pi.jpg";
+			this[n++]="pictures/8co.jpg";
+			this[n++]="pictures/8di.jpg";
 			this[n++]="pictures/8n.jpg";
+			this[n++]="pictures/8pi.jpg";
+			this[n++]="pictures/9co.jpg";
+			this[n++]="pictures/9di.jpg";
 			this[n++]="pictures/9n.jpg";
+			this[n++]="pictures/9pi.jpg";
+			this[n++]="pictures/10co.jpg";
+			this[n++]="pictures/10di.jpg";
 			this[n++]="pictures/10n.jpg";
+			this[n++]="pictures/10pi.jpg";
+			this[n++]="pictures/aa.jpg";
+			this[n++]="pictures/an.jpg";
+			this[n++]="pictures/ar.jpg";
+			this[n++]="pictures/arr.jpg";
+			this[n++]="pictures/jco.jpg";
+			this[n++]="pictures/jdi.jpg";
 			this[n++]="pictures/jn.jpg";
+			this[n++]="pictures/jpi.jpg";
+			this[n++]="pictures/qco.jpg";
+			this[n++]="pictures/qdi.jpg";
 			this[n++]="pictures/qn.jpg";
-			this[n++]="pictures/kn.jpg"
+			this[n++]="pictures/quinapi.jpg";
+			this[n++]="pictures/kco.jpg";
+			this[n++]="pictures/kdi.jpg";
+			this[n++]="pictures/kn.jpg";
+			this[n++]="pictures/kpi.jpg";
 			this.N=n;
+	}
+    var cuantosClicks = 0;
+	 var elegidos=new Array();
+    function cambia(src){
+        var Imagenes=new vector();
+		  var elegir;
+		  var indice;
+		  while(true){
+				if(elegidos.length==52) break;
+				elegir=Math.floor(Math.random() * Imagenes.N);
+				indice=elegidos.indexOf(elegir);
+				if(indice==-1) {
+					elegidos.push(elegir);
+					break;
+				}
+				
+			}		
+		  src= Imagenes[ elegir ] ;
+        cuantosClicks++;
+        if(cuantosClicks >=0 && cuantosClicks<=52){
+				return src;
 			}
-			var Imagenes=new vector();
-			src= Imagenes[ Math.floor(Math.random() * Imagenes.N) ] ;
-			document.write("<img src="+src+" align=center>");
-			</script>
-		</div>
+			else{
+				src="pictures/inicial.jpg"
+				return src;
+			}
+     }
 
+ </script>
+		</div>
+		
 		<button onclick=location="index.html"> Volver</button>
-		<button onclick=location="jugar.html"> Siguiente carta</button>
 
 	</center>
 	</body>

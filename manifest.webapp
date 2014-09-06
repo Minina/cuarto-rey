@@ -4,10 +4,10 @@
   "launch_path": "/index.html",
   "description": "Prueba en Firefox",
   "icons": {
-    "128": "/pictures/images.jpg"
+    "128": "/28.jpg"
   },
   "developer": {
-    "name": "Javiera, Camila, Claudia "
+    "name": "Javiera T, Camila M, Claudia G"
   },
   "install_allowed_from": [
     "*"
